@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.itemClass
+{
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+	background-color: rgb(255, 127, 127);
+}
