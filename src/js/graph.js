@@ -7,8 +7,11 @@ var recentItemsDiv = document.getElementById("recentItemsDiv");
 var tGraphName = document.getElementById("tGraphName");
 var queryStatusDiv = document.getElementById("queryStatusDiv");
 
-// TODO: optimize storage
-// TODO: error house
+// TODO: binary searching for items
+// TODO: replace recently added items with all items
+// TODO: editting graphs
+// TODO: relation and item greps
+// TODO: handle errors
 // TODO: better grapix
 
 //Item Class
@@ -16,13 +19,7 @@ function Item () {
 	this.name = "";
 	this.relatedItems = [];
 	this.relationTypes = [];
-	this.left = null;
-	this.right = null;
 }
-
-//Binary Search Tree to hold all items
-var bst = {};
-bst.root = new Item();
 
 var items = [];
 var selectedItem = null;
@@ -85,7 +82,7 @@ function selectItem(element) {
 		if(nameWithoutRelationType == items[i].name) {
 			selectedItem = items[i];
 			selectedItemDiv.innerHTML = "Selected item: " + selectedItem.name;
-			
+
 			//update related items
 			relatedItemsDiv.innerHTML = "";
 			for(j = 0; j < selectedItem.relatedItems.length; j++) {
