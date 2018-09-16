@@ -6,35 +6,10 @@
 		<link type="text/css" rel="stylesheet" href="styles/mystyle.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
-	<body>
-		<input type="button" value="Add new item" onclick="bAddItem()">
-		<input id="tItemName" type="text">
-		<br>
-		<br>
-		<div id="selectedItemDiv">Selected item: </div>
-		<br>
-		<div>Related items</div>
-		<br>
-		<div id="relatedItemsDiv"></div>
-		<br>
-		<input type="button" value="Add related item" onclick="bAddRelatedItem()">
-		<div>Related Item Name: </div>
-		<input id="tRelatedItemName" type="text">
-		<div>Relation Type: </div>
-		<input id="tRelationType" type="text">
-		<br>
-		<br>
-		<div>Recently Added items</div>
-		<br>
-		<div id="recentItemsDiv"></div>
-		<br>
-		<input id="tGraphName" type="text">
-		<br>
-		<input type="button" value="Save graph" onclick="bSave()">
-		<br>
-		<input id="loadButton" type="button" value="Load graph" onclick="bLoad()">
-		<br>
-		<div id="queryStatusDiv"></div>
-		<script type="text/javascript" src="js/graph.js"></script>
+	<body onload="main()">
+		<div id="graph">
+
+		</div>
+		<script type="text/javascript" src="js/new_graph.js"></script>
 	</body>
 </html>
